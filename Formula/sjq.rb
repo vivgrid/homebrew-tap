@@ -1,15 +1,33 @@
 class Sjq < Formula
   desc "jq, but for AI streaming: read LLM streams at a glance"
   homepage "https://github.com/vivgrid/sjq"
-  url "https://github.com/vivgrid/sjq/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "d936da9bfd980bfd63d54d67c275b3e408f3aeb17d0ccf667fed89e13b7b901e"
+  version "1.0.0"
   license "MIT"
-  head "https://github.com/vivgrid/sjq.git", branch: "main"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-aarch64-apple-darwin.tar.gz"
+      sha256 "088d5eecf516c0886ea9c584e26333c0f8b7665afa878c1ebe12fb478721b48d"
+    end
+    on_intel do
+      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-x86_64-apple-darwin.tar.gz"
+      sha256 "ea378aaf3636e83e22477314a0e6f9c73b44270e5c3406e97b5ceb54605f825f"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "2b007bc460f8ac5bea3ffda15255ce0bd7e5985f4258a76214dff581970f6471"
+    end
+    on_intel do
+      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f6a06ea63f51177f082e3ebb1539949534702d96c72d80d20c14f820178ab7f1"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "sjq"
   end
 
   test do
