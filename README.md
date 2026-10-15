@@ -4,5 +4,6 @@ Homebrew tap for [sjq](https://github.com/vivgrid/sjq) — jq, but for AI stream
 
 ```sh
 brew tap vivgrid/tap
+brew trust vivgrid/tap  # Homebrew only loads formulae from trusted taps; needed once
 brew install sjq
 ```
