@@ -1,28 +1,28 @@
 class Sjq < Formula
   desc "jq, but for AI streaming: read LLM streams at a glance"
   homepage "https://github.com/vivgrid/sjq"
-  version "1.0.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-aarch64-apple-darwin.tar.gz"
-      sha256 "088d5eecf516c0886ea9c584e26333c0f8b7665afa878c1ebe12fb478721b48d"
+      url "https://github.com/vivgrid/sjq/releases/download/v1.1.1/sjq-aarch64-apple-darwin.tar.gz"
+      sha256 "efdc6514829b44de8582af633905bf428d724824f4af29e63927f7edf7f2ed47"
     end
     on_intel do
-      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-x86_64-apple-darwin.tar.gz"
-      sha256 "ea378aaf3636e83e22477314a0e6f9c73b44270e5c3406e97b5ceb54605f825f"
+      url "https://github.com/vivgrid/sjq/releases/download/v1.1.1/sjq-x86_64-apple-darwin.tar.gz"
+      sha256 "c4b76ad8e668fcbad423228f0b5426b7e4f1fae7f22a5d46faf30b560a1e6410"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "2b007bc460f8ac5bea3ffda15255ce0bd7e5985f4258a76214dff581970f6471"
+      url "https://github.com/vivgrid/sjq/releases/download/v1.1.1/sjq-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "59f56cae339cabbd5a04414c6afd27fb31c9c10f010c420c5b5b07a6d94a56c8"
     end
     on_intel do
-      url "https://github.com/vivgrid/sjq/releases/download/v1.0.0/sjq-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f6a06ea63f51177f082e3ebb1539949534702d96c72d80d20c14f820178ab7f1"
+      url "https://github.com/vivgrid/sjq/releases/download/v1.1.1/sjq-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "0714ae26c111f93e1f8e43376f23b6641b51f4fd78827e4792a3e5b8d6e9f1b5"
     end
   end
 
